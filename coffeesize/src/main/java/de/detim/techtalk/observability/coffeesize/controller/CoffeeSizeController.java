@@ -3,7 +3,6 @@ package de.detim.techtalk.observability.coffeesize.controller;
 import de.detim.techtalk.observability.coffeesize.repo.CoffeeSize;
 import de.detim.techtalk.observability.coffeesize.service.CoffeeSizeService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

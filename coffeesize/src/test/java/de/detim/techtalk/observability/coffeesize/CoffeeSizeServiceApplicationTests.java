@@ -1,10 +1,10 @@
-package de.detim.techtalk.observability.coffehouse;
+package de.detim.techtalk.observability.coffeesize;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CoffehouseApplicationTests {
+class CoffeeSizeServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

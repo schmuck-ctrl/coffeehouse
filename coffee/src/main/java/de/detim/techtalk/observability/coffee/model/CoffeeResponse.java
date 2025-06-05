@@ -1,4 +1,4 @@
-package de.detim.techtalk.observability.coffee;
+package de.detim.techtalk.observability.coffee.model;
 
 import lombok.Builder;
 import lombok.RequiredArgsConstructor;

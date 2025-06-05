@@ -1,8 +1,8 @@
 package de.detim.techtalk.observability.coffee.service;
 
-import de.detim.techtalk.observability.coffee.CoffeeResponse;
-import de.detim.techtalk.observability.coffee.CoffeeSize;
-import de.detim.techtalk.observability.coffee.CoffeeType;
+import de.detim.techtalk.observability.coffee.model.CoffeeResponse;
+import de.detim.techtalk.observability.coffee.model.CoffeeSize;
+import de.detim.techtalk.observability.coffee.model.CoffeeType;
 import io.micrometer.observation.Observation;
 import io.micrometer.observation.ObservationRegistry;
 import io.micrometer.observation.annotation.Observed;

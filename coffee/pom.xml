@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>de.detim.techtalk.observability</groupId>
-	<artifactId>coffehouse</artifactId>
+	<artifactId>coffe</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>coffehouse</name>
 	<description>Demo project for Tech-Talk about observability</description>

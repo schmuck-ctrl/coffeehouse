@@ -1,8 +1,8 @@
 package de.detim.techtalk.observability.coffee.service;
 
-import de.detim.techtalk.observability.coffee.CoffeeResponse;
-import de.detim.techtalk.observability.coffee.CoffeeSize;
-import de.detim.techtalk.observability.coffee.CoffeeType;
+import de.detim.techtalk.observability.coffee.model.CoffeeResponse;
+import de.detim.techtalk.observability.coffee.model.CoffeeSize;
+import de.detim.techtalk.observability.coffee.model.CoffeeType;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.web.client.RestClient;
