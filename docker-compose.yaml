@@ -1,0 +1,12 @@
+services:
+
+  coffehouse-db:
+    image: mysql:9.3.0
+    container_name: 'coffehouse-db'
+    environment:
+      MYSQL_DATABASE: 'coffeehouse'
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - '3306:3306'
