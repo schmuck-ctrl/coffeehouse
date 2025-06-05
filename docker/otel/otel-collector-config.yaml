@@ -1,0 +1,40 @@
+# Receivers collect telemetry from one or more sources.
+# Configuring a receiver does not enable it. Receivers are enabled by adding them to the appropriate pipelines within the service section.
+# Detailed config: https://github.com/open-telemetry/opentelemetry-collector/blob/main/receiver/README.md
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+# Processors take the data collected by receivers and modify or transform it before sending it to the exporters.
+# Processors are optional
+# Configuring a processor does not enable it. Processors are enabled by adding them to the appropriate pipelines within the service section.
+# Detailed config: https://github.com/open-telemetry/opentelemetry-collector/blob/main/processor/README.md
+processors:
+  filter/health_check:
+    traces:
+      span:
+        - 'IsMatch(attributes["url.path"], ".*(/health|/health/liveness\\.(xhtml|jsf))$$")'
+
+# Exporters send data to one or more backends or destinations
+# Configuring an exporter does not enable it. Exporters are enabled by adding them to the appropriate pipelines within the service section.
+# Detailed config: https://github.com/open-telemetry/opentelemetry-collector/blob/main/exporter/README.md
+exporters:
+  debug: # Exportiert Traces in die Logs (zum Debuggen)
+    verbosity: detailed
+  otlp/tempo:
+    endpoint: tempo:4317
+    tls:
+      insecure: true
+
+
+# The service section is used to configure what components are enabled in the Collector based on the configuration found in the receivers, processors, exporters, and extensions sections.
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [filter/health_check]
+      exporters: [debug, otlp/tempo]
